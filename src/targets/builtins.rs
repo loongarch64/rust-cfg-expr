@@ -714,6 +714,16 @@ pub const ALL_BUILTINS: &[TargetInfo<'static>] = &[
         endian: Endian::little,
     },
     TargetInfo {
+        triple: "loongarch64-unknown-linux-gnu",
+        os: Some(Os::linux),
+        arch: Arch::loongarch64,
+        env: Some(Env::gnu),
+        vendor: Some(Vendor::unknown),
+        family: Some(Family::unix),
+        pointer_width: 64,
+        endian: Endian::little,
+    },
+    TargetInfo {
         triple: "mips-unknown-linux-gnu",
         os: Some(Os::linux),
         arch: Arch::mips,
@@ -1650,6 +1660,7 @@ impl<'a> super::Arch<'a> {
     pub const arm: Arch<'static> = Arch("arm");
     pub const avr: Arch<'static> = Arch("avr");
     pub const hexagon: Arch<'static> = Arch("hexagon");
+    pub const loongarch64: Arch<'static> = Arch("loongarch64");
     pub const mips: Arch<'static> = Arch("mips");
     pub const mips64: Arch<'static> = Arch("mips64");
     pub const msp430: Arch<'static> = Arch("msp430");
